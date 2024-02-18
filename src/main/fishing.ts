@@ -13,12 +13,12 @@ const closeEnough = (a: number, b: number) => {
 
 const fishingCheckInterval = (delay: number) => {
   return setInterval(() => {
-    screen.colorAt(new Point(452, 630)).then((colorUp) => {
+    screen.colorAt(new Point(609, 835)).then((colorUp) => {
       if (closeEnough(colorUp.R, 255) && closeEnough(colorUp.G, 204) && closeEnough(colorUp.B, 0)) {
         click(Key.Up);
       }
     })
-    screen.colorAt(new Point(453, 632)).then((colorDown) => {
+    screen.colorAt(new Point(609, 835)).then((colorDown) => {
       if (closeEnough(colorDown.R, 5) && closeEnough(colorDown.G, 250) && closeEnough(colorDown.B, 5)) {
         click(Key.Down);
       }
